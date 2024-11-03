@@ -39,7 +39,7 @@ const companies = [
 
 const countries = [
   'Ukraine',
-  'USA',
+  'United States',
   'Israel',
   'France',
   'Germany',
