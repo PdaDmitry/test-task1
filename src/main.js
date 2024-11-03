@@ -1,9 +1,17 @@
+// import { name, lastName, company, country } from './js/pixabay-api.js';
+import { objCustomer } from './js/api.js';
+import { renderCustomer } from './js/render-functions.js';
+
 const body = document.querySelector('body');
 
 const sidebarList = document.querySelector('.sidebar-list');
 const sidebarButtons = document.querySelectorAll('.sidebar-btn');
 const contents = document.querySelectorAll('.content');
-console.log(sidebarButtons);
+// console.log(sidebarButtons);
+
+const customersList = document.querySelector('.custom-list');
+const customerHtml = renderCustomer(objCustomer);
+console.log(customerHtml);
 
 sidebarButtons.forEach(sidebarButton => {
   sidebarButton.addEventListener('click', () => {
@@ -15,3 +23,5 @@ sidebarButtons.forEach(sidebarButton => {
     document.getElementById(targetContent).classList.add('active');
   });
 });
+
+customersList.insertAdjacentHTML('beforeend', customerHtml);
