@@ -60,17 +60,17 @@ const randomElem = arr => {
   return arr[randomIndex];
 };
 
-const createCustomer = () => {
-  let name = randomElem(names);
+export const createCustomer = () => {
+  // let name = randomElem(names);
   let lastName = randomElem(lastNames);
   let company = randomElem(companies);
   let country = randomElem(countries);
-  let email = `${name.toLowerCase()}@${company.toLowerCase()}.com`;
+  let email = `@${company.toLowerCase()}.com`;
   let status = randomElem(statuses);
 
   return {
     id: Date.now(),
-    name,
+    // name,
     lastName,
     company,
     email,
@@ -79,5 +79,5 @@ const createCustomer = () => {
   };
 };
 
-export const objCustomer = createCustomer();
+// export const objCustomer = createCustomer();
 // ===============================================================
